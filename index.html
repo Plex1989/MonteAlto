@@ -3,111 +3,157 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Monte Alto | Lotes Campestres</title>
+    <title>Monte Alto | Inversión en Xalapa</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Plus+Jakarta+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Plus+Jakarta+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root { --forest: #1a2c2b; --gold: #c5a059; }
-        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #fff; -webkit-tap-highlight-color: transparent; }
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #fcfcfc; -webkit-tap-highlight-color: transparent; }
         .font-serif { font-family: 'Playfair Display', serif; }
         .bg-forest { background-color: var(--forest); }
         .text-gold { color: var(--gold); }
         .video-bg {
-            background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://img.youtube.com/vi/aYBG-mUm-ps/maxresdefault.jpg');
+            background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.5)), url('https://img.youtube.com/vi/aYBG-mUm-ps/maxresdefault.jpg');
             background-size: cover; background-position: center;
         }
-        .btn-wa { background-color: #25d366; animation: pulse 2s infinite; }
-        @keyframes pulse { 0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); } 70% { box-shadow: 0 0 0 10px rgba(37, 211, 102, 0); } 100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); } }
+        .btn-wa { background-color: #25d366; box-shadow: 0 10px 20px rgba(37, 211, 102, 0.3); }
+        .card-shadow { box-shadow: 0 20px 40px -15px rgba(0,0,0,0.1); }
+        
+        /* Estilo para el mapa usando tu archivo subido */
+        .map-container {
+            background-image: url('mapa.jpg');
+            background-size: cover;
+            background-position: center;
+        }
     </style>
 </head>
-<body class="max-w-md mx-auto min-h-screen relative shadow-xl">
+<body class="max-w-md mx-auto bg-white min-h-screen relative shadow-2xl">
 
-    <!-- Header -->
-    <header class="bg-forest py-8 px-6 text-center border-b border-gold/20">
-        <div class="inline-block border border-gold/40 px-4 py-1 mb-3">
-            <p class="text-white tracking-[0.3em] text-[9px] uppercase font-light">Andares Corporativo</p>
-        </div>
-        <h1 class="text-gold font-serif text-4xl mb-1">Monte Alto</h1>
-        <p class="text-white/40 text-[10px] uppercase tracking-widest">Residencial Campestre</p>
-    </header>
-
-    <!-- Urgency -->
-    <div class="bg-gold/10 py-3 text-center border-b border-gold/10">
-        <p class="text-forest text-[10px] font-bold tracking-widest uppercase">Solo 4 lotes disponibles en preventa</p>
-    </div>
-
-    <!-- Main -->
-    <main class="p-6">
-        <div class="text-center mb-8">
-            <h2 class="text-2xl font-serif text-forest">Coatepec, Veracruz</h2>
-            <p class="text-gray-500 text-sm mt-1">Naturaleza y plusvalía garantizada.</p>
-        </div>
-
-        <!-- Player -->
-        <a href="https://youtu.be/aYBG-mUm-ps?si=Sh-AHm5MZLuySTXI" target="_blank" class="block w-full video-bg aspect-video rounded-xl relative overflow-hidden mb-8 shadow-2xl">
-            <div class="absolute inset-0 flex flex-col items-center justify-center">
-                <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center shadow-lg">
-                    <i class="fa-solid fa-play text-forest text-xl ml-1"></i>
-                </div>
-                <p class="text-white text-[10px] mt-4 font-bold tracking-widest uppercase bg-black/40 px-3 py-1 rounded-full backdrop-blur-sm">Toca para ver video</p>
-            </div>
-        </a>
-
-        <!-- Precio -->
-        <div class="bg-gray-50 rounded-xl p-6 text-center mb-10 border border-gray-100">
-            <p class="text-gray-400 text-[9px] uppercase tracking-widest mb-1 font-bold">Inversión desde</p>
-            <div class="flex items-center justify-center gap-1 text-forest font-serif">
-                <span class="text-4xl font-bold">$2,400</span>
-                <span class="text-gray-400 text-sm font-sans">/ m²</span>
-            </div>
-            <p class="text-gold text-[11px] mt-3 font-bold">30% Enganche | 24 Meses Sin Intereses</p>
-        </div>
-
-        <!-- CTA Principal -->
-        <a href="https://wa.me/522283146884?text=Hola,%20quiero%20conocer%20Monte%20Alto" class="block w-full bg-forest text-gold text-center py-5 rounded-xl font-bold uppercase tracking-[0.2em] text-xs shadow-lg mb-12">
-            Agenda tu visita hoy
-        </a>
-
-        <!-- Features -->
-        <div class="grid grid-cols-1 gap-10 mb-10">
-            <div class="text-center">
-                <i class="fa-solid fa-chart-line text-gold text-2xl mb-3"></i>
-                <h3 class="font-bold text-sm text-forest mb-1 uppercase">Plusvalía +12%</h3>
-                <p class="text-[11px] text-gray-500">Crecimiento estratégico asegurado.</p>
-            </div>
-            <div class="text-center">
-                <i class="fa-solid fa-mountain text-gold text-2xl mb-3"></i>
-                <h3 class="font-bold text-sm text-forest mb-1 uppercase">Reserva Protegida</h3>
-                <p class="text-[11px] text-gray-500">Vistas naturales que nunca cambiarán.</p>
-            </div>
-            <div class="text-center">
-                <i class="fa-solid fa-car text-gold text-2xl mb-3"></i>
-                <h3 class="font-bold text-sm text-forest mb-1 uppercase">Conectividad</h3>
-                <p class="text-[11px] text-gray-500">A 5 min de la zona comercial de Xalapa.</p>
-            </div>
-        </div>
-
-        <!-- Botón Cotizar -->
-        <a href="https://wa.me/522283146884?text=Hola,%20quiero%20una%20cotización" class="block w-full border border-forest/20 text-forest text-center py-4 rounded-xl font-bold uppercase tracking-widest text-[9px]">
-            Cotizar mi lote
-        </a>
-    </main>
-
-    <!-- Footer -->
-    <footer class="bg-forest text-white py-12 px-10 rounded-t-[40px] text-center">
-        <p class="text-gold font-serif text-xl mb-2">Andares Corporativo</p>
-        <p class="text-white/30 text-[9px] uppercase tracking-widest italic">"Confianza que construye"</p>
-        <div class="mt-8 flex justify-center gap-4 text-white/40">
-            <a href="https://wa.me/522283146884"><i class="fa-brands fa-whatsapp text-xl"></i></a>
-            <i class="fa-solid fa-location-dot text-xl"></i>
-        </div>
-    </footer>
-
-    <!-- Floating Button -->
-    <a href="https://wa.me/522283146884" class="btn-wa fixed bottom-6 right-6 w-14 h-14 rounded-full flex items-center justify-center text-white text-2xl shadow-2xl z-50">
+    <!-- WhatsApp Flotante -->
+    <a href="https://wa.me/522283146884?text=Hola,%20vi%20tu%20página%20de%20Monte%20Alto%20y%20quiero%20más%20información" class="btn-wa fixed bottom-6 right-6 w-14 h-14 rounded-full flex items-center justify-center text-white text-2xl z-50">
         <i class="fa-brands fa-whatsapp"></i>
     </a>
+
+    <!-- Header Premium -->
+    <header class="bg-forest pt-12 pb-10 px-6 text-center">
+        <div class="inline-block border border-gold/40 px-6 py-1.5 mb-6">
+            <p class="text-white tracking-[0.5em] text-[9px] uppercase font-light">Andares Corporativo</p>
+        </div>
+        <h1 class="text-gold font-serif text-5xl mb-2 tracking-tight">Monte Alto</h1>
+        <p class="text-white/40 text-[11px] uppercase tracking-[0.3em]">Exclusividad & Naturaleza</p>
+    </header>
+
+    <main class="p-6">
+        <div class="text-center mb-10">
+            <h2 class="text-3xl font-serif text-forest mb-2">Xalapa, Veracruz</h2>
+            <p class="text-gray-500 text-sm italic">"Donde tu inversión crece con la naturaleza."</p>
+        </div>
+
+        <!-- Video Player -->
+        <a href="https://youtu.be/aYBG-mUm-ps?si=Sh-AHm5MZLuySTXI" target="_blank" class="block w-full video-bg aspect-video rounded-3xl relative overflow-hidden mb-12 shadow-2xl group active:scale-95 transition-transform">
+            <div class="absolute inset-0 flex flex-col items-center justify-center">
+                <div class="w-20 h-20 bg-white/10 backdrop-blur-md rounded-full flex items-center justify-center border border-white/30">
+                    <div class="w-14 h-14 bg-white rounded-full flex items-center justify-center shadow-lg">
+                        <i class="fa-solid fa-play text-forest text-xl ml-1"></i>
+                    </div>
+                </div>
+                <p class="text-white text-[10px] mt-5 font-bold tracking-[0.3em] uppercase drop-shadow-md">Sobrevolar Monte Alto</p>
+            </div>
+        </a>
+
+        <!-- Certeza Jurídica y Características -->
+        <div class="grid grid-cols-2 gap-4 mb-12">
+            <div class="bg-gray-50 p-4 rounded-2xl text-center border border-gray-100 flex flex-col items-center justify-center min-h-[100px]">
+                <i class="fa-solid fa-file-signature text-gold mb-2 text-xl"></i>
+                <p class="text-[9px] font-bold uppercase text-forest leading-tight">Lotes en Propiedad</p>
+            </div>
+            <div class="bg-gray-50 p-4 rounded-2xl text-center border border-gray-100 flex flex-col items-center justify-center min-h-[100px]">
+                <i class="fa-solid fa-bolt-lightning text-gold mb-2 text-xl"></i>
+                <p class="text-[9px] font-bold uppercase text-forest leading-tight">Escrituración Inmediata</p>
+            </div>
+            <div class="bg-gray-50 p-4 rounded-2xl text-center border border-gray-100 flex flex-col items-center justify-center min-h-[100px]">
+                <i class="fa-solid fa-scale-balanced text-gold mb-2 text-xl"></i>
+                <p class="text-[9px] font-bold uppercase text-forest leading-tight">Certeza Jurídica</p>
+            </div>
+            <div class="bg-gray-50 p-4 rounded-2xl text-center border border-gray-100 flex flex-col items-center justify-center min-h-[100px]">
+                <i class="fa-solid fa-plug text-gold mb-2 text-xl"></i>
+                <p class="text-[9px] font-bold uppercase text-forest leading-tight">Servicios urbanos a unos metros</p>
+            </div>
+        </div>
+
+        <!-- Precio -->
+        <div class="bg-[#fdfbf7] rounded-3xl p-8 text-center mb-12 border border-gold/10 card-shadow">
+            <p class="text-gray-400 text-[10px] uppercase tracking-widest mb-3 font-bold">Inversión Base</p>
+            <div class="flex items-center justify-center gap-1 text-forest">
+                <span class="text-gray-400 text-2xl font-light">$</span>
+                <span class="text-5xl font-bold font-serif">2,400</span>
+                <span class="text-gray-400 text-sm font-sans italic ml-1">/ m²</span>
+            </div>
+            <p class="text-gold text-[11px] font-bold uppercase tracking-wider mt-4 tracking-widest">24 Meses Sin Intereses</p>
+        </div>
+
+        <!-- Botón Agenda -->
+        <a href="https://wa.me/522283146884?text=Hola,%20quiero%20agendar%20una%20visita%20a%20Monte%20Alto" 
+           class="bg-forest block w-full text-gold text-center py-5 rounded-2xl font-bold uppercase tracking-[0.2em] text-xs shadow-2xl mb-16 border-b-4 border-black/20 active:translate-y-1 transition-all">
+            <i class="fa-regular fa-calendar-check mr-2 text-sm"></i> Agenda tu visita hoy
+        </a>
+
+        <!-- Mapa Section Actualizada con tu Imagen -->
+        <section class="mb-16">
+            <h3 class="text-center font-serif text-2xl text-forest mb-6">Ubicación Estratégica</h3>
+            <div class="relative rounded-3xl overflow-hidden shadow-xl border border-gray-200 bg-gray-100">
+                <a href="https://www.google.com/maps/search/Hoteles/@19.4993344,-96.9432885,2984m/data=!3m1!1e3?entry=ttu&g_ep=EgoyMDI2MDQyMi4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="block">
+                    <!-- Mapa de Monte Alto (Archivo mapa.jpg de tu repositorio) -->
+                    <div class="aspect-square w-full map-container flex items-end p-6">
+                        <div class="bg-white/90 backdrop-blur px-4 py-3 rounded-xl w-full flex justify-between items-center shadow-lg">
+                            <div>
+                                <p class="text-[10px] font-bold text-forest uppercase tracking-tighter">Ver en Google Maps</p>
+                                <p class="text-[9px] text-gray-500">Pulsa para abrir navegación</p>
+                            </div>
+                            <div class="w-8 h-8 bg-forest rounded-full flex items-center justify-center text-gold shadow-md">
+                                <i class="fa-solid fa-location-arrow text-xs"></i>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <p class="text-center text-[10px] text-gray-400 mt-4 px-6 uppercase tracking-widest leading-relaxed">A solo 5 minutos del Velódromo Internacional</p>
+        </section>
+
+        <!-- Entorno Natural Mejorado -->
+        <div class="space-y-12 mb-12">
+            <div class="flex flex-col items-center text-center group">
+                <div class="w-16 h-16 rounded-full bg-gold/5 border border-gold/20 flex items-center justify-center text-gold mb-6 shadow-sm">
+                    <i class="fa-solid fa-water text-2xl"></i>
+                </div>
+                <h3 class="font-bold text-gray-800 text-lg tracking-tight mb-2 uppercase">Rodeado de Ríos</h3>
+                <p class="text-xs text-gray-500 leading-relaxed px-8">La frescura y el sonido del agua natural como parte de tu día a día.</p>
+            </div>
+
+            <div class="flex flex-col items-center text-center group">
+                <div class="w-16 h-16 rounded-full bg-gold/5 border border-gold/20 flex items-center justify-center text-gold mb-6 shadow-sm">
+                    <i class="fa-solid fa-leaf text-2xl"></i>
+                </div>
+                <h3 class="font-bold text-gray-800 text-lg tracking-tight mb-2 uppercase">Rodeado De Reserva Protegida</h3>
+                <p class="text-xs text-gray-500 leading-relaxed px-8">Colindancia con áreas de conservación que garantizan tu plusvalía y un entorno natural único.</p>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Footer Premium -->
+    <footer class="bg-forest text-white pt-24 pb-16 px-10 rounded-t-[60px] shadow-[0_-20px_50px_rgba(0,0,0,0.2)] text-center">
+        <p class="text-gold font-serif text-3xl mb-3 uppercase tracking-tighter">Andares Corporativo</p>
+        <p class="text-white/30 text-[10px] uppercase tracking-[0.4em] font-light italic mb-10">"Confianza que construye"</p>
+        
+        <div class="flex flex-col gap-4 text-xs text-white/70 font-light border-t border-white/5 pt-10">
+            <p><i class="fa-solid fa-phone text-gold mr-2 text-[10px]"></i> 228 314 6884</p>
+            <p><i class="fa-solid fa-map-pin text-gold mr-2 text-[10px]"></i> Xalapa, Veracruz.</p>
+        </div>
+        
+        <p class="text-[9px] text-white/10 mt-16 uppercase tracking-widest">© 2024 Monte Alto Veracruz</p>
+    </footer>
 
 </body>
 </html>
