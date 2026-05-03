@@ -1,95 +1,221 @@
-<!DOCTYPE html>
+}<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MONTE ALTO | Inversión Patrimonial</title>
+    <title>Monte Alto | Inversión Inteligente</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Plus+Jakarta+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700;900&display=swap" rel="stylesheet">
     <style>
-        body { font-family: 'Montserrat', sans-serif; scroll-behavior: smooth; }
-        .hero-gradient { background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1500382017468-9049fed747ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80'); background-size: cover; background-position: center; }
+        :root {
+            --forest-green: #1a2c2b;
+            --gold: #c5a059;
+        }
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #f0f2f0;
+            -webkit-tap-highlight-color: transparent;
+        }
+        .font-serif { font-family: 'Playfair Display', serif; }
+        .bg-forest { background-color: var(--forest-green); }
+        .text-gold { color: var(--gold); }
+        .border-gold { border-color: var(--gold); }
+        
+        /* Thumbnail de YouTube como fondo */
+        .video-thumbnail {
+            background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.5)), url('https://img.youtube.com/vi/aYBG-mUm-ps/maxresdefault.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #1a2c2b 0%, #2d4a48 100%);
+            box-shadow: 0 10px 20px rgba(26, 44, 43, 0.3);
+        }
+
+        .floating-wa {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #25d366;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 30px;
+            color: white;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+            z-index: 1000;
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
     </style>
 </head>
-<body class="bg-gray-50 text-gray-800">
+<body class="max-w-md mx-auto bg-white min-h-screen relative shadow-2xl">
 
-    <nav class="fixed w-full z-50 bg-white/90 backdrop-blur-md shadow-sm">
-        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-            <h1 class="text-2xl font-black tracking-tighter text-gray-900">ANTARES <span class="text-green-600">INMOBILIARIA</span></h1>
-            <a href="https://wa.me/5212284237348" class="bg-green-600 text-white px-5 py-2 rounded-full font-bold text-sm hover:bg-green-700 transition">Contactar</a>
-        </div>
-    </nav>
-
-    <header class="h-screen flex items-center justify-center text-center text-white hero-gradient px-6">
-        <div class="max-w-3xl">
-            <span class="uppercase tracking-[0.3em] text-sm font-bold mb-4 block">Desarrollo Exclusivo</span>
-            <h2 class="text-6xl md:text-8xl font-black mb-6 leading-none">MONTE <br> ALTO</h2>
-            <p class="text-lg md:text-xl mb-10 opacity-90">Tu patrimonio en armonía con la naturaleza. Terrenos de alta plusvalía en una ubicación estratégica.</p>
-            <div class="flex flex-col md:flex-row gap-4 justify-center">
-                <a href="#detalles" class="bg-white text-gray-900 px-8 py-4 rounded-xl font-black uppercase tracking-widest hover:bg-gray-100 transition">Ver Detalles</a>
-                <a href="https://wa.me/5212284237348" class="bg-green-600 text-white px-8 py-4 rounded-xl font-black uppercase tracking-widest hover:bg-green-700 transition">Solicitar Avalúo</a>
-            </div>
-        </div>
-    </header>
-
-    <section id="detalles" class="py-20 px-6 max-w-7xl mx-auto">
-        <div class="grid md:grid-cols-3 gap-12 text-center">
-            <div class="p-8 bg-white rounded-3xl shadow-xl shadow-gray-200/50">
-                <i class="fa-solid fa-shield-halved text-4xl text-green-600 mb-6"></i>
-                <h3 class="font-bold text-xl mb-4">Certeza Jurídica</h3>
-                <p class="text-gray-500 text-sm leading-relaxed">Documentación en regla y avalúo oficial que garantiza el valor real de tu inversión.</p>
-            </div>
-            <div class="p-8 bg-white rounded-3xl shadow-xl shadow-gray-200/50 border-t-4 border-green-600">
-                <i class="fa-solid fa-chart-line text-4xl text-green-600 mb-6"></i>
-                <h3 class="font-bold text-xl mb-4">Plusvalía Garantizada</h3>
-                <p class="text-gray-500 text-sm leading-relaxed">Zona en pleno desarrollo con crecimiento anual proyectado por encima de la media.</p>
-            </div>
-            <div class="p-8 bg-white rounded-3xl shadow-xl shadow-gray-200/50">
-                <i class="fa-solid fa-leaf text-4xl text-green-600 mb-6"></i>
-                <h3 class="font-bold text-xl mb-4">Entorno Natural</h3>
-                <p class="text-gray-500 text-sm leading-relaxed">Vistas espectaculares y cercanía a recursos naturales como el Río Carnero.</p>
-            </div>
-        </div>
-    </section>
-
-    <section class="py-16 bg-gray-900 text-white">
-        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
-            <div>
-                <h2 class="text-4xl font-black mb-6 italic uppercase tracking-tighter">Master Plan <br><span class="text-green-500 text-2xl">Monte Alto</span></h2>
-                <p class="text-gray-400 mb-8 leading-relaxed">
-                    Diseño urbanístico planeado para maximizar el espacio y la privacidad. 
-                    Nuestro croquis oficial muestra la delimitación exacta de cada parcela y las zonas federales protegidas.
-                </p>
-                <ul class="space-y-4 text-sm font-bold">
-                    <li class="flex items-center gap-3 text-green-500"><i class="fa-solid fa-check"></i> Acceso principal a Xalapa</li>
-                    <li class="flex items-center gap-3 text-green-500"><i class="fa-solid fa-check"></i> Colindancia con Río Carnero</li>
-                    <li class="flex items-center gap-3 text-green-500"><i class="fa-solid fa-check"></i> Áreas verdes delimitadas</li>
-                </ul>
-            </div>
-            <div class="rounded-3xl overflow-hidden shadow-2xl border-4 border-white/10">
-                <img src="croquis.jpg" alt="Croquis Monte Alto" class="w-full h-auto hover:scale-105 transition duration-500">
-            </div>
-        </div>
-    </section>
-
-    <section class="py-20 px-6 max-w-7xl mx-auto text-center">
-        <h2 class="text-3xl font-black mb-10">UBICACIÓN ESTRATÉGICA</h2>
-        <div class="rounded-[40px] overflow-hidden h-[450px] shadow-2xl border-8 border-white bg-gray-200">
-            <div class="w-full h-full flex items-center justify-center text-gray-400 italic">
-                <p>Mapa de Ubicación (Google Maps)</p>
-            </div>
-        </div>
-    </section>
-
-    <footer class="bg-white py-12 px-6 border-t border-gray-100 text-center">
-        <p class="font-black text-gray-900 mb-2 uppercase tracking-widest text-xs">Antares Inmobiliaria</p>
-        <p class="text-gray-400 text-[10px]">© 2026 Todos los derechos reservados. Las imágenes son ilustrativas.</p>
-    </footer>
-
-    <a href="https://wa.me/5212284237348" class="fixed bottom-8 right-8 bg-[#25d366] text-white w-16 h-16 rounded-full flex items-center justify-center text-3xl shadow-2xl hover:scale-110 transition-transform z-[100] active:scale-95">
+    <!-- WhatsApp Flotante -->
+    <a href="https://wa.me/5212284237348?text=Hola,%20vi%20la%20página%20de%20Monte%20Alto%20y%20quiero%20más%20información" class="floating-wa">
         <i class="fa-brands fa-whatsapp"></i>
     </a>
+
+    <!-- Header -->
+    <header class="bg-forest py-10 px-6 text-center">
+        <div class="inline-block border border-gold/40 px-4 py-1 mb-4">
+            <p class="text-white tracking-[0.4em] text-[9px] uppercase font-light">Andares Corporativo</p>
+        </div>
+        <h1 class="text-gold font-serif text-4xl mb-1">Monte Alto</h1>
+        <p class="text-white/50 text-[10px] uppercase tracking-[0.2em]">Residencial Campestre</p>
+    </header>
+
+    <!-- Urgency Banner -->
+    <div class="bg-gold/10 py-3 text-center border-y border-gold/20">
+        <p class="text-forest-green text-[10px] font-bold tracking-widest uppercase">
+            <i class="fa-solid fa-clock-rotate-left mr-1"></i> Solo quedan 4 lotes disponibles
+        </p>
+    </div>
+
+    <!-- Main Content -->
+    <main class="p-6">
+        
+        <div class="text-center mb-8">
+            <h2 class="text-2xl font-serif text-forest-green">Coatepec, Veracruz</h2>
+            <p class="text-gray-500 text-sm mt-1">Naturaleza, paz y alta plusvalía.</p>
+        </div>
+
+        <!-- Video Player -->
+        <a href="https://youtu.be/aYBG-mUm-ps?si=Sh-AHm5MZLuySTXI" target="_blank" class="block w-full video-thumbnail aspect-video rounded-2xl relative overflow-hidden mb-10 shadow-xl group">
+            <!-- Overlay con botón Play -->
+            <div class="absolute inset-0 flex flex-col items-center justify-center">
+                <div class="w-16 h-16 bg-white/20 backdrop-blur-md rounded-full flex items-center justify-center border border-white/30 group-active:scale-90 transition-transform">
+                    <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-lg">
+                        <i class="fa-solid fa-play text-forest-green text-lg ml-1"></i>
+                    </div>
+                </div>
+                <p class="text-white text-xs mt-4 font-bold drop-shadow-md tracking-widest uppercase">Toca para ver video</p>
+            </div>
+            <!-- Etiqueta de volumen -->
+            <div class="absolute top-3 left-3 bg-black/60 px-2 py-1 rounded text-[8px] text-white backdrop-blur-sm border border-white/10">
+                <i class="fa-solid fa-volume-high mr-1"></i> SONIDO DISPONIBLE
+            </div>
+        </a>
+
+        <!-- Precios -->
+        <div class="bg-gray-50 rounded-2xl p-6 text-center mb-10 border border-gray-100 shadow-inner">
+            <p class="text-gray-400 text-[10px] uppercase tracking-widest mb-2 font-bold">Inversión desde</p>
+            <div class="flex items-center justify-center gap-1">
+                <span class="text-forest-green text-4xl font-bold font-serif">$2,400</span>
+                <span class="text-gray-400 text-sm italic">/ m²</span>
+            </div>
+            <p class="text-gold text-xs mt-3 font-semibold tracking-wide">30% Enganche | 24 Meses Sin Intereses</p>
+        </div>
+
+        <!-- Botón Principal -->
+        <a href="https://wa.me/5212284237348?text=Hola,%20quiero%20agendar%20una%20cita%20para%20conocer%20Monte%20Alto" 
+           class="btn-primary block w-full text-gold text-center py-5 rounded-xl font-bold uppercase tracking-[0.2em] text-xs mb-14 active:scale-95 transition-all">
+            <i class="fa-regular fa-calendar-check mr-2 text-sm"></i> Agenda tu visita hoy
+        </a>
+
+        <!-- Características (Minimalistas) -->
+        <div class="space-y-12 mb-14">
+            <div class="flex flex-col items-center text-center">
+                <div class="w-12 h-12 rounded-full bg-gold/10 flex items-center justify-center text-gold mb-4">
+                    <i class="fa-solid fa-up-right-from-square"></i>
+                </div>
+                <h3 class="font-bold text-gray-800 mb-2">Plusvalía del +12%</h3>
+                <p class="text-xs text-gray-500 leading-relaxed px-6">Ubicado en la zona de mayor crecimiento inmobiliario de la región.</p>
+            </div>
+
+            <div class="flex flex-col items-center text-center">
+                <div class="w-12 h-12 rounded-full bg-gold/10 flex items-center justify-center text-gold mb-4">
+                    <i class="fa-solid fa-mountain-sun"></i>
+                </div>
+                <h3 class="font-bold text-gray-800 mb-2">Reserva Natural</h3>
+                <p class="text-xs text-gray-500 leading-relaxed px-6">Terrenos rodeados de vegetación protegida y vistas inigualables al Río Carnero.</p>
+            </div>
+        </div>
+
+        <!-- ESTRATEGIA AVALÚO (NUEVO) -->
+        <div class="bg-forest text-white rounded-2xl p-6 text-center mb-14 shadow-lg relative overflow-hidden">
+            <div class="absolute -right-4 -top-4 text-gold opacity-10"><i class="fa-solid fa-file-contract text-6xl"></i></div>
+            <h3 class="font-serif text-xl text-gold mb-2">Certeza Jurídica</h3>
+            <p class="text-[11px] text-white/80 mb-5 leading-relaxed font-light">Contamos con <b class="text-white">Avalúo Oficial</b> que respalda la plusvalía y el precio de oportunidad de Monte Alto.</p>
+            <a href="https://wa.me/5212284237348?text=Hola,%20me%20interesa%20solicitar%20el%20expediente%20y%20avalúo%20oficial%20de%20Monte%20Alto" 
+               class="inline-block border border-gold text-gold px-6 py-3 rounded-full text-[10px] font-bold uppercase tracking-widest active:bg-gold active:text-forest-green transition-colors">
+                <i class="fa-solid fa-file-pdf mr-1"></i> Solicitar Expediente
+            </a>
+        </div>
+
+        <!-- CROQUIS / MASTER PLAN (NUEVO) -->
+        <div class="mb-14">
+            <div class="text-center mb-6">
+                <h2 class="text-2xl font-serif text-forest-green">Master Plan</h2>
+                <p class="text-gray-500 text-sm mt-1">Diseño en armonía natural</p>
+            </div>
+            
+            <!-- Imagen del Croquis -->
+            <div class="rounded-2xl overflow-hidden shadow-xl border-4 border-white mb-6">
+                <img src="croquis.jpg" alt="Croquis Monte Alto" class="w-full h-auto object-cover">
+            </div>
+            
+            <ul class="space-y-3 px-2">
+                <li class="flex items-center gap-3 text-xs text-gray-600 font-medium">
+                    <i class="fa-solid fa-check text-gold"></i> Delimitación clara y precisa
+                </li>
+                <li class="flex items-center gap-3 text-xs text-gray-600 font-medium">
+                    <i class="fa-solid fa-check text-gold"></i> Márgenes de río y zonas respetadas
+                </li>
+            </ul>
+        </div>
+
+        <!-- UBICACIÓN Y MAPA (NUEVO) -->
+        <div class="mb-10 text-center">
+            <div class="inline-flex items-center justify-center w-12 h-12 rounded-full bg-gold/10 text-gold mb-4">
+                <i class="fa-solid fa-map-location-dot"></i>
+            </div>
+            <h3 class="font-bold text-gray-800 mb-6">Ubicación Estratégica</h3>
+            
+            <!-- Google Maps iframe genérico de Coatepec/Xalapa (visual) -->
+            <div class="rounded-2xl overflow-hidden shadow-md h-48 bg-gray-200 relative mb-4">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d119642.02980685458!2d-96.99345710688082!3d19.5312450531557!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85db31d102e347ad%3A0xc3f8e5d0a64dc346!2sXalapa-Enr%C3%ADquez%2C%20Ver.!5e0!3m2!1sen!2smx!4v1700000000000!5m2!1sen!2smx" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+
+            <!-- Botón directo a tu link de Google Maps -->
+            <a href="https://maps.app.goo.gl/wurz2JUqZVTnHmF16?g_st=ac" target="_blank" 
+               class="inline-block text-center text-[10px] uppercase tracking-widest text-forest-green font-bold bg-gray-100 px-6 py-3 rounded-full hover:bg-gray-200 transition-colors">
+               <i class="fa-solid fa-location-arrow mr-1"></i> Abrir en app de Maps
+            </a>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-forest text-white py-16 px-10 rounded-t-[40px] mt-10">
+        <h3 class="text-2xl font-serif text-gold mb-6">Contáctanos</h3>
+        <p class="text-xs text-white/50 mb-8 leading-relaxed italic">"Tu confianza es el cimiento de cada uno de nuestros proyectos."</p>
+        
+        <div class="space-y-4 mb-12">
+            <div class="flex items-center gap-4 text-xs">
+                <i class="fa-solid fa-phone text-gold"></i>
+                <span>228 423 7348</span>
+            </div>
+            <div class="flex items-center gap-4 text-xs">
+                <i class="fa-solid fa-map-pin text-gold"></i>
+                <span>Coatepec - Xalapa, Ver.</span>
+            </div>
+        </div>
+
+        <div class="text-center pt-8 border-t border-white/5">
+            <p class="text-gold font-serif text-lg">Andares Corporativo</p>
+            <p class="text-[8px] text-white/20 mt-4 tracking-widest uppercase">© 2026 Monte Alto Veracruz</p>
+        </div>
+    </footer>
 
 </body>
 </html>
