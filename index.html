@@ -15,20 +15,20 @@
     <style>
         body { font-family: 'Montserrat', sans-serif; scroll-behavior: smooth; position: relative; }
         
-        /* Efecto de Marca de Agua en el fondo de la página */
+        /* Efecto de Marca de Agua ajustado (Más arriba, más pequeño, más visible) */
         body::before {
             content: "";
             position: fixed;
-            top: 50%;
+            top: 15%; /* Lo movimos hacia arriba */
             left: 50%;
-            transform: translate(-50%, -50%);
-            width: 60%;
-            height: 60%;
+            transform: translateX(-50%);
+            width: 350px; /* Tamaño más pequeño y controlado */
+            height: 350px;
             background-image: url('logo.png'); /* SUBE TU LOGO COMO logo.png a GitHub */
             background-repeat: no-repeat;
-            background-position: center;
+            background-position: center top;
             background-size: contain;
-            opacity: 0.05; 
+            opacity: 0.12; /* Le subimos la opacidad para que se note más */
             z-index: -1;
             pointer-events: none;
         }
@@ -44,16 +44,15 @@
 </head>
 <body class="bg-gray-50 text-gray-800">
 
-    <!-- Navegación -->
-    <nav class="fixed w-full z-50 bg-white/95 backdrop-blur-md shadow-md border-b border-gray-100">
-        <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
-            <div class="flex items-center gap-2">
-                <i class="fa-solid fa-leaf text-green-700 text-2xl"></i>
-                <div class="leading-none">
-                    <h1 class="text-xl font-black tracking-tighter text-gray-900 uppercase italic">Andares</h1>
-                    <span class="text-[9px] font-bold text-gray-500 uppercase tracking-widest">Corporativo Inmobiliario</span>
-                </div>
+    <!-- Navegación (Fondo gris clarito) -->
+    <nav class="fixed w-full z-50 bg-gray-100/95 backdrop-blur-md shadow-md border-b border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
+            
+            <!-- LOGO EN LA BARRA DE NAVEGACIÓN -->
+            <div class="flex items-center">
+                <img src="logo.png" alt="Logo Andares" class="h-12 w-auto object-contain">
             </div>
+
             <a href="#contacto" class="bg-green-700 text-white px-6 py-2 rounded-full font-bold text-sm hover:bg-green-800 transition">Contactar Asesor</a>
         </div>
     </nav>
@@ -164,8 +163,7 @@
     <!-- Footer -->
     <footer class="bg-gray-900 text-white py-12 text-center">
         <div class="flex justify-center items-center gap-2 mb-4">
-            <i class="fa-solid fa-leaf text-green-700 text-xl"></i>
-            <h2 class="text-xl font-black tracking-tighter uppercase italic">Andares</h2>
+            <img src="logo.png" alt="Logo Andares" class="h-10 w-auto opacity-50 grayscale">
         </div>
         <p class="text-gray-500 text-[10px] uppercase tracking-widest">© 2026 Todos los derechos reservados | Confianza que construye.</p>
     </footer>
