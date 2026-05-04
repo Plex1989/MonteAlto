@@ -15,20 +15,20 @@
     <style>
         body { font-family: 'Montserrat', sans-serif; scroll-behavior: smooth; position: relative; }
         
-        /* Efecto de Marca de Agua ajustado (Más arriba, más pequeño, más visible) */
+        /* Marca de Agua en el fondo de la página */
         body::before {
             content: "";
             position: fixed;
-            top: 15%; /* Lo movimos hacia arriba */
+            top: 15%; 
             left: 50%;
             transform: translateX(-50%);
-            width: 350px; /* Tamaño más pequeño y controlado */
+            width: 350px; 
             height: 350px;
-            background-image: url('logo.png'); /* SUBE TU LOGO COMO logo.png a GitHub */
+            background-image: url('logo.png'); 
             background-repeat: no-repeat;
             background-position: center top;
             background-size: contain;
-            opacity: 0.12; /* Le subimos la opacidad para que se note más */
+            opacity: 0.10; 
             z-index: -1;
             pointer-events: none;
         }
@@ -44,21 +44,31 @@
 </head>
 <body class="bg-gray-50 text-gray-800">
 
-    <!-- Navegación (Fondo gris clarito) -->
-    <nav class="fixed w-full z-50 bg-gray-100/95 backdrop-blur-md shadow-md border-b border-gray-200">
-        <div class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
+    <!-- Navegación -->
+    <nav class="fixed w-full z-50 bg-white/95 backdrop-blur-md shadow-md border-b border-gray-100 h-20 flex items-center">
+        <div class="max-w-7xl w-full mx-auto px-4 flex justify-between items-center relative">
             
-            <!-- LOGO EN LA BARRA DE NAVEGACIÓN -->
-            <div class="flex items-center">
-                <img src="logo.png" alt="Logo Andares" class="h-12 w-auto object-contain">
+            <!-- CONTENEDOR DE LOGOS -->
+            <div class="flex items-center relative">
+                <!-- Sello de Agua (Más grande, a la izquierda, desbordando la barra) -->
+                <img src="logo.png" alt="Sello" class="absolute -left-6 top-1/2 -translate-y-1/2 h-24 w-auto opacity-20 pointer-events-none z-0">
+                
+                <!-- Logo Original de Texto (Por encima del sello) -->
+                <div class="flex items-center gap-2 pl-14 relative z-10">
+                    <i class="fa-solid fa-leaf text-green-700 text-3xl"></i>
+                    <div class="leading-none">
+                        <h1 class="text-2xl font-black tracking-tighter text-gray-900 uppercase italic">Andares</h1>
+                        <span class="text-[10px] font-bold text-gray-500 uppercase tracking-widest">Corporativo Inmobiliario</span>
+                    </div>
+                </div>
             </div>
 
-            <a href="#contacto" class="bg-green-700 text-white px-6 py-2 rounded-full font-bold text-sm hover:bg-green-800 transition">Contactar Asesor</a>
+            <a href="#contacto" class="bg-green-700 text-white px-6 py-2 rounded-full font-bold text-sm hover:bg-green-800 transition shadow-lg relative z-10">Contactar Asesor</a>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <header class="pt-32 pb-20 px-6 hero-bg min-h-screen flex flex-col items-center justify-center text-center text-white">
+    <header class="pt-32 pb-20 px-6 hero-bg min-h-screen flex flex-col items-center justify-center text-center text-white relative z-10">
         <div class="max-w-4xl mx-auto w-full">
             <span class="gold-text uppercase tracking-[0.4em] text-xs font-bold mb-4 block">Lotes Campestres Exclusivos</span>
             <h2 class="text-6xl md:text-8xl font-black mb-4 leading-none tracking-tighter uppercase italic">Monte Alto</h2>
@@ -70,7 +80,7 @@
             </div>
 
             <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="#oferta" class="gold-gradient text-white px-8 py-4 rounded-xl font-black uppercase tracking-widest shadow-xl">Ver Oferta Preventa</a>
+                <a href="#oferta" class="gold-gradient text-white px-8 py-4 rounded-xl font-black uppercase tracking-widest shadow-xl hover:scale-105 transition">Ver Oferta Preventa</a>
                 <a href="#vuelo360" class="bg-white/10 backdrop-blur-md text-white border border-white/30 px-8 py-4 rounded-xl font-bold uppercase tracking-widest hover:bg-white/20 transition">Explorar en 360°</a>
             </div>
         </div>
@@ -103,13 +113,13 @@
         <div id="panorama"></div>
     </section>
 
-    <!-- SECCIÓN DE CONTACTOS MULTIPLES IGUALADOS -->
+    <!-- SECCIÓN DE CONTACTOS MULTIPLES -->
     <section id="contacto" class="py-20 bg-gray-100 border-y border-gray-200">
         <div class="max-w-7xl mx-auto px-6 text-center">
             <h2 class="text-3xl font-black uppercase mb-12 italic">Atención Personalizada</h2>
             <div class="grid md:grid-cols-3 gap-8">
                 
-                <!-- ASESOR 1 (Tu número) -->
+                <!-- ASESOR 1 -->
                 <div class="bg-white p-8 rounded-3xl shadow-lg border-t-8 border-green-600 transform hover:-translate-y-2 transition">
                     <div class="w-16 h-16 bg-green-50 text-green-600 rounded-full flex items-center justify-center mx-auto mb-6">
                         <i class="fa-solid fa-user-tie text-2xl"></i>
@@ -119,7 +129,7 @@
                     <a href="https://wa.me/5212284237348?text=Hola,%20solicito%20información%20de%20los%20lotes%20Monte%20Alto" class="block w-full border-2 border-green-600 text-green-700 py-3 rounded-xl font-bold hover:bg-green-600 hover:text-white transition">Contactar Asesor</a>
                 </div>
 
-                <!-- ASESOR 2 (Termina en 5005) -->
+                <!-- ASESOR 2 -->
                 <div class="bg-white p-8 rounded-3xl shadow-lg border-t-8 border-green-600 transform hover:-translate-y-2 transition">
                     <div class="w-16 h-16 bg-green-50 text-green-600 rounded-full flex items-center justify-center mx-auto mb-6">
                         <i class="fa-solid fa-user-tie text-2xl"></i>
@@ -129,7 +139,7 @@
                     <a href="https://wa.me/5212731325005?text=Hola,%20solicito%20información%20de%20los%20lotes%20Monte%20Alto" class="block w-full border-2 border-green-600 text-green-700 py-3 rounded-xl font-bold hover:bg-green-600 hover:text-white transition">Contactar Asesor</a>
                 </div>
 
-                <!-- ASESOR 3 (Termina en 6884) -->
+                <!-- ASESOR 3 -->
                 <div class="bg-white p-8 rounded-3xl shadow-lg border-t-8 border-green-600 transform hover:-translate-y-2 transition">
                     <div class="w-16 h-16 bg-green-50 text-green-600 rounded-full flex items-center justify-center mx-auto mb-6">
                         <i class="fa-solid fa-user-tie text-2xl"></i>
@@ -161,11 +171,12 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 text-white py-12 text-center">
-        <div class="flex justify-center items-center gap-2 mb-4">
-            <img src="logo.png" alt="Logo Andares" class="h-10 w-auto opacity-50 grayscale">
+    <footer class="bg-gray-900 text-white py-12 text-center relative overflow-hidden">
+        <div class="flex justify-center items-center gap-2 mb-4 relative z-10">
+            <i class="fa-solid fa-leaf text-green-700 text-xl"></i>
+            <h2 class="text-xl font-black tracking-tighter uppercase italic">Andares</h2>
         </div>
-        <p class="text-gray-500 text-[10px] uppercase tracking-widest">© 2026 Todos los derechos reservados | Confianza que construye.</p>
+        <p class="text-gray-500 text-[10px] uppercase tracking-widest relative z-10">© 2026 Todos los derechos reservados | Confianza que construye.</p>
     </footer>
 
     <!-- Botón WhatsApp Principal (TÚ) Flotante -->
@@ -183,8 +194,8 @@
             "author": "Andares Corporativo",
             "hotSpots": [
                 {
-                    "pitch": -15.5, /* Recuerda poner tus coordenadas exactas aquí */
-                    "yaw": 0.0,     /* Recuerda poner tus coordenadas exactas aquí */
+                    "pitch": -15.5, /* Tus coordenadas */
+                    "yaw": 0.0,     /* Tus coordenadas */
                     "type": "info",
                     "text": "DESARROLLO MONTE ALTO - INICIO DE OBRA"
                 }
