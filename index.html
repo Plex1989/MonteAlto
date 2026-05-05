@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;800;900&display=swap" rel="stylesheet">
     
-    <!-- Librería para el Visor 360 -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.css"/>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.js"></script>
 
@@ -40,19 +39,24 @@
         .gold-gradient { background: linear-gradient(135deg, #d4af37 0%, #aa7c11 100%); }
         .gold-text { color: #d4af37; }
         #panorama { width: 100%; height: 500px; border-radius: 1.5rem; border: 4px solid white; box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1); }
+        
+        /* Personalización del Hotspot para Scene (transiciones) */
+        .pnlm-hotspot-base { animation: pulse 2s infinite; }
+        @keyframes pulse {
+            0% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.1); opacity: 0.8; }
+            100% { transform: scale(1); opacity: 1; }
+        }
     </style>
 </head>
 <body class="bg-gray-50 text-gray-800">
 
-    <!-- Navegación con Sello de Agua Izquierdo -->
     <nav class="fixed w-full z-50 bg-white/95 backdrop-blur-md shadow-md border-b border-gray-100 h-20 flex items-center">
         <div class="max-w-7xl w-full mx-auto px-4 flex justify-between items-center relative">
             
             <div class="flex items-center relative">
-                <!-- Sello de Agua (Desbordado a la izquierda) -->
                 <img src="logo.png" alt="Sello" class="absolute -left-16 top-1/2 -translate-y-1/2 h-28 w-auto opacity-20 pointer-events-none z-0">
                 
-                <!-- Logo Original de Texto -->
                 <div class="flex items-center gap-2 pl-12 relative z-10">
                     <i class="fa-solid fa-leaf text-green-700 text-3xl"></i>
                     <div class="leading-none">
@@ -66,7 +70,6 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
     <header class="pt-32 pb-20 px-6 hero-bg min-h-screen flex flex-col items-center justify-center text-center text-white relative z-10">
         <div class="max-w-4xl mx-auto w-full">
             <span class="gold-text uppercase tracking-[0.4em] text-xs font-bold mb-4 block">Lotes Campestres Exclusivos</span>
@@ -84,7 +87,6 @@
         </div>
     </header>
 
-    <!-- Banner Oferta -->
     <section id="oferta" class="py-12 bg-red-700 text-white text-center">
         <div class="max-w-5xl mx-auto px-6">
             <h2 class="text-4xl md:text-5xl font-black uppercase mb-4 tracking-tighter italic">Últimos 3 Lotes en Preventa</h2>
@@ -102,16 +104,14 @@
         </div>
     </section>
 
-    <!-- SECCIÓN VISOR 360 -->
     <section id="vuelo360" class="py-16 px-6 max-w-7xl mx-auto">
         <div class="text-center mb-12">
-            <h2 class="text-4xl font-black uppercase text-gray-900 mb-2 italic">Vuelo Interactivo</h2>
-            <p class="text-gray-500 italic font-bold uppercase tracking-widest text-xs text-green-700">Explora Monte Alto desde el aire</p>
+            <h2 class="text-4xl font-black uppercase text-gray-900 mb-2 italic">Tour Virtual 360°</h2>
+            <p class="text-gray-500 italic font-bold uppercase tracking-widest text-xs text-green-700">Explora desde las alturas y desciende al proyecto</p>
         </div>
         <div id="panorama"></div>
     </section>
 
-    <!-- Características Premium -->
     <section class="py-12 px-6 max-w-7xl mx-auto">
         <div class="text-center mb-12">
             <h2 class="text-3xl font-black uppercase tracking-tighter text-gray-900 mb-4 italic">Características Premium</h2>
@@ -142,7 +142,6 @@
         </div>
     </section>
 
-    <!-- Financiamiento y Avalúo -->
     <section class="py-20 bg-gray-900 text-white overflow-hidden">
         <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
             <div>
@@ -166,7 +165,6 @@
                 </div>
             </div>
             
-            <!-- Tarjeta de Avalúo Rotada -->
             <div class="bg-white text-gray-900 rounded-[2.5rem] p-10 shadow-2xl border-t-[12px] border-green-700 transform rotate-2 hover:rotate-0 transition duration-500">
                 <h3 class="text-3xl font-black mb-4 uppercase italic">Avalúo Oficial</h3>
                 <p class="text-gray-500 mb-8">Garantizamos tu plusvalía. El valor real de mercado certificado es de:</p>
@@ -176,7 +174,6 @@
         </div>
     </section>
 
-    <!-- Master Plan -->
     <section class="py-20 bg-white">
         <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
             <div class="rounded-3xl overflow-hidden shadow-2xl border-4 border-gray-100">
@@ -200,7 +197,6 @@
         </div>
     </section>
 
-    <!-- Ubicación y Google Maps -->
     <section class="py-20 px-6 bg-gray-100">
         <div class="max-w-7xl mx-auto text-center">
             <h2 class="text-4xl font-black mb-4 uppercase italic tracking-tighter">Ubicación Estratégica</h2>
@@ -211,13 +207,11 @@
         </div>
     </section>
 
-    <!-- SECCIÓN DE CONTACTOS MULTIPLES -->
     <section id="contacto" class="py-20 bg-white border-y border-gray-200">
         <div class="max-w-7xl mx-auto px-6 text-center">
             <h2 class="text-3xl font-black uppercase mb-12 italic">Atención Personalizada</h2>
             <div class="grid md:grid-cols-3 gap-8">
                 
-                <!-- ASESOR 1 (Tu número) -->
                 <div class="bg-gray-50 p-8 rounded-3xl shadow-lg border-t-8 border-green-600 transform hover:-translate-y-2 transition">
                     <div class="w-16 h-16 bg-green-100 text-green-600 rounded-full flex items-center justify-center mx-auto mb-6">
                         <i class="fa-solid fa-user-tie text-2xl"></i>
@@ -227,7 +221,6 @@
                     <a href="https://wa.me/5212284237348?text=Hola,%20solicito%20información%20de%20los%20lotes%20Monte%20Alto" class="block w-full border-2 border-green-600 text-green-700 py-3 rounded-xl font-bold hover:bg-green-600 hover:text-white transition">Contactar Asesor</a>
                 </div>
 
-                <!-- ASESOR 2 -->
                 <div class="bg-gray-50 p-8 rounded-3xl shadow-lg border-t-8 border-green-600 transform hover:-translate-y-2 transition">
                     <div class="w-16 h-16 bg-green-100 text-green-600 rounded-full flex items-center justify-center mx-auto mb-6">
                         <i class="fa-solid fa-user-tie text-2xl"></i>
@@ -237,7 +230,6 @@
                     <a href="https://wa.me/5212731325005?text=Hola,%20solicito%20información%20de%20los%20lotes%20Monte%20Alto" class="block w-full border-2 border-green-600 text-green-700 py-3 rounded-xl font-bold hover:bg-green-600 hover:text-white transition">Contactar Asesor</a>
                 </div>
 
-                <!-- ASESOR 3 -->
                 <div class="bg-gray-50 p-8 rounded-3xl shadow-lg border-t-8 border-green-600 transform hover:-translate-y-2 transition">
                     <div class="w-16 h-16 bg-green-100 text-green-600 rounded-full flex items-center justify-center mx-auto mb-6">
                         <i class="fa-solid fa-user-tie text-2xl"></i>
@@ -251,7 +243,6 @@
         </div>
     </section>
 
-    <!-- Footer -->
     <footer class="bg-gray-900 text-white py-12 text-center relative overflow-hidden">
         <div class="flex justify-center items-center gap-2 mb-4 relative z-10">
             <i class="fa-solid fa-leaf text-green-700 text-xl"></i>
@@ -260,27 +251,54 @@
         <p class="text-gray-500 text-[10px] uppercase tracking-widest relative z-10">© 2026 Todos los derechos reservados | Confianza que construye.</p>
     </footer>
 
-    <!-- Botón WhatsApp Principal (TÚ) Flotante -->
-    <a href="https://wa.me/5212284237348" class="fixed bottom-8 right-8 bg-[#25d366] text-white w-16 h-16 rounded-full flex items-center justify-center text-3xl shadow-2xl z-[100] hover:scale-110 transition">
+    <a href="https://wa.me/5212283146884" class="fixed bottom-8 right-8 bg-[#25d366] text-white w-16 h-16 rounded-full flex items-center justify-center text-3xl shadow-2xl z-[100] hover:scale-110 transition">
         <i class="fa-brands fa-whatsapp"></i>
     </a>
 
-    <!-- Configuración del Visor 360 -->
     <script>
         pannellum.viewer('panorama', {
-            "type": "equirectangular",
-            "panorama": "foto360.jpg",
-            "autoLoad": true,
-            "title": "Vuelo Aéreo Monte Alto",
-            "author": "Andares Corporativo",
-            "hotSpots": [
-                {
-                    "pitch": -15.5, /* Tus coordenadas */
-                    "yaw": 0.0,     /* Tus coordenadas */
-                    "type": "info",
-                    "text": "DESARROLLO MONTE ALTO - INICIO DE OBRA"
+            "default": {
+                "firstScene": "vistaAlta",
+                "author": "Andares Corporativo",
+                "sceneFadeDuration": 1000,
+                "autoLoad": true
+            },
+            "scenes": {
+                "vistaAlta": {
+                    "title": "Vuelo Aéreo Panorámico",
+                    "type": "equirectangular",
+                    "panorama": "foto360_alta.jpg", // Aquí va tu nueva foto
+                    "hotSpots": [
+                        {
+                            "pitch": -25.0, /* Ajusta esto para que la flecha quede apuntando hacia abajo/al desarrollo */
+                            "yaw": 0.0,
+                            "type": "scene",
+                            "text": "Descender a Vista de Obra",
+                            "sceneId": "vistaBaja"
+                        }
+                    ]
+                },
+                "vistaBaja": {
+                    "title": "Desarrollo Monte Alto",
+                    "type": "equirectangular",
+                    "panorama": "foto360.jpg", // La foto original que ya tenías
+                    "hotSpots": [
+                        {
+                            "pitch": -15.5, 
+                            "yaw": 0.0,     
+                            "type": "info",
+                            "text": "DESARROLLO MONTE ALTO - INICIO DE OBRA"
+                        },
+                        {
+                            "pitch": 30.0, /* Flecha apuntando hacia arriba */
+                            "yaw": 0.0,
+                            "type": "scene",
+                            "text": "Subir a Vista Panorámica",
+                            "sceneId": "vistaAlta"
+                        }
+                    ]
                 }
-            ]
+            }
         });
     </script>
 
