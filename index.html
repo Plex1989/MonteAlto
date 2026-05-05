@@ -44,6 +44,7 @@
         .hotspot-bajar {
             height: 50px;
             width: 50px;
+            margin-left: -25px; /* Centra la flecha horizontalmente */
             background-color: #dc2626; /* Rojo brillante */
             border-radius: 50%;
             border: 3px solid white;
@@ -86,8 +87,8 @@
             opacity: 1;
         }
         @keyframes bounce-bajar {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(12px); }
+            0%, 100% { margin-top: -25px; } /* Centrado exacto verticalmente */
+            50% { margin-top: -15px; } /* Rebote sutil que no rompe el visor 360 */
         }
     </style>
 </head>
