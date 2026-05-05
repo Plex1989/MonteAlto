@@ -57,29 +57,27 @@
             box-shadow: 0 10px 15px rgba(0,0,0,0.5);
             animation: bounce-bajar 2s infinite;
         }
-        .hotspot-bajar::after {
-            content: "\f063"; /* Icono de flecha hacia abajo (FontAwesome) */
-            font-family: "Font Awesome 6 Free";
-            font-weight: 900;
-        }
-        .hotspot-bajar span {
-            visibility: visible; /* Ahora siempre visible */
+        .hotspot-bajar::before {
+            content: "DESCENDER";
             position: absolute;
-            top: 60px; /* Queda debajo de la flecha roja */
+            top: -40px; /* Lo posiciona exactamente arriba de la flecha */
             left: 50%;
             transform: translateX(-50%);
             background-color: rgba(0,0,0,0.9);
             color: white;
-            text-align: center;
-            padding: 8px 14px;
-            border-radius: 8px;
-            white-space: nowrap;
+            padding: 6px 12px;
+            border-radius: 6px;
             font-family: 'Montserrat', sans-serif;
-            font-size: 14px;
+            font-size: 12px;
             font-weight: 800;
-            opacity: 1; /* Ahora siempre visible */
-            pointer-events: none;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+            white-space: nowrap;
+            letter-spacing: 1px;
+            pointer-events: none; /* Evita que estorbe al hacer clic */
+        }
+        .hotspot-bajar::after {
+            content: "\f063"; /* Icono de flecha hacia abajo (FontAwesome) */
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
         }
         @keyframes bounce-bajar {
             0%, 100% { margin-top: -25px; } /* Centrado exacto verticalmente */
@@ -311,7 +309,6 @@
                             "pitch": -20.0, /* ⬅️ Mueve arriba/abajo si lo necesitas */
                             "yaw": -5.0,    /* ⬅️ Mueve izquierda/derecha si lo necesitas */
                             "type": "scene",
-                            "text": "DESCENDER",
                             "sceneId": "vistaBaja",
                             "cssClass": "hotspot-bajar"
                         }
