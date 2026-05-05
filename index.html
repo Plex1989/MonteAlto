@@ -39,6 +39,56 @@
         .gold-gradient { background: linear-gradient(135deg, #d4af37 0%, #aa7c11 100%); }
         .gold-text { color: #d4af37; }
         #panorama { width: 100%; height: 500px; border-radius: 1.5rem; border: 4px solid white; box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1); }
+        
+        /* Personalización de Flecha Roja hacia abajo en Visor 360 */
+        .hotspot-bajar {
+            height: 50px;
+            width: 50px;
+            background-color: #dc2626; /* Rojo brillante */
+            border-radius: 50%;
+            border: 3px solid white;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            cursor: pointer;
+            box-shadow: 0 10px 15px rgba(0,0,0,0.5);
+            animation: bounce-bajar 2s infinite;
+        }
+        .hotspot-bajar::after {
+            content: "\f063"; /* Icono de flecha hacia abajo (FontAwesome) */
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+        }
+        .hotspot-bajar span {
+            visibility: hidden;
+            position: absolute;
+            top: 60px; /* Queda debajo de la flecha roja */
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: rgba(0,0,0,0.9);
+            color: white;
+            text-align: center;
+            padding: 8px 14px;
+            border-radius: 8px;
+            white-space: nowrap;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 14px;
+            font-weight: 800;
+            opacity: 0;
+            transition: opacity 0.3s;
+            pointer-events: none;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+        }
+        .hotspot-bajar:hover span {
+            visibility: visible;
+            opacity: 1;
+        }
+        @keyframes bounce-bajar {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(12px); }
+        }
     </style>
 </head>
 <body class="bg-gray-50 text-gray-800">
@@ -265,8 +315,9 @@
                             "pitch": -25.0, /* Ajusta esto para que la flecha quede apuntando hacia abajo/al desarrollo */
                             "yaw": 0.0,
                             "type": "scene",
-                            "text": "Descender a Vista de Obra",
-                            "sceneId": "vistaBaja"
+                            "text": "Descender a los Lotes en Venta",
+                            "sceneId": "vistaBaja",
+                            "cssClass": "hotspot-bajar"
                         }
                     ]
                 },
