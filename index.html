@@ -145,7 +145,16 @@
             <h2 class="text-4xl font-black uppercase text-gray-900 mb-2 italic">Tour Virtual 360°</h2>
             <p class="text-gray-500 italic font-bold uppercase tracking-widest text-xs text-green-700">Explora desde las alturas y desciende al proyecto</p>
         </div>
-        <div id="panorama"></div>
+        
+        <div class="relative">
+            <div id="panorama"></div>
+            
+            <!-- Mensaje Inteligente para Celulares -->
+            <div class="absolute top-6 left-1/2 -translate-x-1/2 bg-black/80 text-white px-5 py-2.5 rounded-full text-[10px] font-bold uppercase tracking-widest backdrop-blur-md border border-white/30 pointer-events-none z-[10] flex items-center gap-3 md:hidden landscape:hidden shadow-xl w-max">
+                <i class="fa-solid fa-mobile-screen-button animate-bounce text-yellow-400 text-sm"></i>
+                <span>Gira tu celular en horizontal</span>
+            </div>
+        </div>
     </section>
 
     <section class="py-12 px-6 max-w-7xl mx-auto">
@@ -306,7 +315,7 @@
                     "panorama": "foto360_alta.jpg", 
                     "hotSpots": [
                         {
-                            "pitch": -35.0, /* ⬅️ Mueve arriba/abajo si lo necesitas */
+                            "pitch": -20.0, /* ⬅️ Mueve arriba/abajo si lo necesitas */
                             "yaw": -5.0,    /* ⬅️ Mueve izquierda/derecha si lo necesitas */
                             "type": "scene",
                             "sceneId": "vistaBaja",
@@ -326,7 +335,7 @@
                             "text": "DESARROLLO MONTE ALTO - INICIO DE OBRA"
                         },
                         {
-                            "pitch": 0.0, /* Flecha apuntando hacia arriba */
+                            "pitch": 30.0, /* Flecha apuntando hacia arriba */
                             "yaw": 0.0,
                             "type": "scene",
                             "text": "Subir a Vista Panorámica",
